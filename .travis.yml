@@ -6,14 +6,14 @@
     # Get Google Chrome headless browser for Angular tests
     # Install latest Docker CE so we can use Dockerfile outside build context
     addons:
-      apt:
-        sources:
-          - google-chrome
-        packages:
-          - google-chrome-stable
-          - docker-ce
       chrome: stable
-     
+      apt:
+#        sources:
+#          - google-chrome
+        packages:
+#          - google-chrome-stable
+          - docker-ce
+
     # Install any dependencies, update Docker Compose to 1.23.2 so we can use Dockerfile outside build context
     before_install:
      - docker --version
