@@ -21,7 +21,9 @@
 
     # Install any dependencies, update Docker Compose to 1.23.2 so we can use Dockerfile outside build context
     before_install:
-     - google-chrome-stable --headless --disable-gpu &
+#     - google-chrome-stable --headless --disable-gpu &
+     - which google-chrome-stable
+     - which google-chrome 
      - docker --version
      - docker-compose --version
      - sudo rm /usr/local/bin/docker-compose
